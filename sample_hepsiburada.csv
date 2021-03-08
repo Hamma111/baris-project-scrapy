@@ -1,0 +1,1677 @@
+ProductURL,ProductID,ProductSKU,ProductAvailability,Title,Brand,Price,OriginalPrice,DescriptionHTML,img_url1,img_url2,img_url3,img_url4,img_url5
+https://www.hepsiburada.com/mark-ryden-laptop-notebook-sirt-cantasi-9116-siyah-usb-sarj-portlu-p-HBV00001493UJ?magaza=First%20Sourcer,HB00001493UI,HBV00001493UJ,True,Mark Ryden Laptop - Notebook Sırt Çantası 9116 Siyah (Usb Sarj Portlu),Mark Ryden,"377,40TL","377,40 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Mark Ryden Laptop - Notebook Sırt Çantası 9116 Siyah (Usb Sarj Portlu)
+<pre>Sirt Cantasi  47*30*15cm</pre>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/markryden"" title=""Mark Ryden"">Mark Ryden</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Çanta Tipi</th>
+<td>Sırt Çantası</td>
+</tr>
+<tr>
+<th>Ekran Boyutu (inç)</th>
+<td>15.6</td>
+</tr>
+<tr>
+<th>Laptop Boyut Aralığı</th>
+<td>15 - 15,9 inç</td>
+</tr>
+<tr>
+<th>Renk</th>
+<td>Siyah</td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption>Diğer</caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00001493UJ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11032549359666.jpg,https://productimages.hepsiburada.net/s/50/1000/11032549392434.jpg,https://productimages.hepsiburada.net/s/50/1000/11032549425202.jpg,https://productimages.hepsiburada.net/s/50/1000/11032549457970.jpg,https://productimages.hepsiburada.net/s/50/1000/11032549490738.jpg
+https://www.hepsiburada.com/xiaomi-ionic-sac-kurutma-fon-makinesi-p-HBV00000P42FX?magaza=First%20Sourcer,HB00000P42FW,HBV00000P42FX,True,Xiaomi Ionic Saç Kurutma Fön Makinesi,Xiaomi,"398,00TL","424,90 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+<p><span style=""color:f28b00;font-family: helvetica;font-weight: bold;font-size:18px;letter-spacing:-0.3px"">Xiaomi Ionic Saç Kurutma Fön Makinesi</span></p>
+<p> </p> <div cel_widget_id=""aplus-module-12"" class=""celwidget aplus-module module-12"" style='box-sizing: border-box; min-width: 979px; padding-bottom: 12px; margin-bottom: 12px; color: rgb(17, 17, 17); font-family: ""Amazon Ember"", Arial, sans-serif; font-size: 13px;'><div aria-live=""polite"" class=""a-expander-collapsed-height a-row a-expander-container a-expander-partial-collapse-container"" data-a-expander-collapsed-height=""360"" data-a-expander-name=""aplus-module-expander"" style=""box-sizing: border-box; width: 979px; overflow: hidden; position: relative; max-height: 360px;""><div aria-expanded=""false"" class=""a-expander-content a-expander-partial-collapse-content"" style=""box-sizing: border-box; overflow: hidden; position: relative;""><div class=""aplus-module-wrapper apm-spacing apm-floatnone"" style=""box-sizing: border-box; text-align: inherit; display: inline-block; float: none; zoom: 1;""><div class=""apm-sidemodule aplus-module-content"" style=""box-sizing: border-box; text-align: inherit; margin: 0px auto; width: 970px; padding: 0px; position: relative; min-height: 300px;""><div class=""apm-hero-image"" style=""box-sizing: border-box; float: none;""><img alt=""3"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/ec3fe1a6-4307-4738-a072-fd104b42a17b.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/ec3fe1a6-4307-4738-a072-fd104b42a17b.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; position: absolute;""/></div></div> <div style=""box-sizing: border-box; clear: both;""> </div></div></div></div></div> <div cel_widget_id=""aplus-module-4"" class=""celwidget aplus-module module-4"" style='box-sizing: border-box; min-width: 979px; padding-bottom: 12px; margin-bottom: 12px; color: rgb(17, 17, 17); font-family: ""Amazon Ember"", Arial, sans-serif; font-size: 13px;'><div aria-live=""polite"" class=""a-expander-collapsed-height a-row a-expander-container a-expander-partial-collapse-container"" data-a-expander-collapsed-height=""700"" data-a-expander-name=""aplus-module-expander"" style=""box-sizing: border-box; width: 979px; overflow: hidden; position: relative; max-height: 700px;""><div aria-expanded=""false"" class=""a-expander-content a-expander-partial-collapse-content"" style=""box-sizing: border-box; overflow: hidden; position: relative;""><div class=""aplus-module-wrapper"" style=""box-sizing: border-box; text-align: inherit; display: inline-block;""><div class=""apm-spacing"" style=""box-sizing: border-box; float: left; zoom: 1;""><div class=""apm-floatleft apm-fixed-width"" style=""box-sizing: border-box; width: 969px; float: left;""><div class=""a-spacing-extra-large"" style=""box-sizing: border-box; margin-bottom: 26px !important;""><div class=""apm-spacing"" style=""box-sizing: border-box; float: left; zoom: 1;""><table class=""apm-fixed-width a-spacing-mini apm-fourthcol-table"" style=""box-sizing: border-box; margin-bottom: 6px !important; border-collapse: collapse; width: 969px; border-spacing: 0px;""> <tbody style=""box-sizing: border-box;""> <tr style=""box-sizing: border-box;""> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""2"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/62fc2f05-6d7f-4ce9-bebc-671236f67f66.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/62fc2f05-6d7f-4ce9-bebc-671236f67f66.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""1"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/524b89c2-0bfc-456e-ace4-2c770ed67c15.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/524b89c2-0bfc-456e-ace4-2c770ed67c15.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""20"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/5407cff2-d696-4505-b327-7f2252f5ac5f.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/5407cff2-d696-4505-b327-7f2252f5ac5f.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""01"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/0562d1bf-5f91-4a4f-b9a5-df794b56e3ae.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/0562d1bf-5f91-4a4f-b9a5-df794b56e3ae.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> </tr> <tr style=""box-sizing: border-box;""> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px 0px; height: 281px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Harici Su İyon Kanalı</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">İyonların ısı kaybını önler ve</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">daha uzun mesafelerde etkili iletimini sağlar</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Su iyonları, motordaki ısıya karşı yalıtmak ve saçların en derin tabakalarına iletilmesini sağlamak için ayrı bir bölmede üretilir.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px; height: 281px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Parlak ve sağlıklı saçların sırrı ;İyonik teknoloji</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Mi Ionic Saç Kurutma Makinesi, saçınızı aynı anda kuruyan ve koruyan en son teknolojiye sahiptir. Dahili bir yoğunlaştırma iğnesi, havadaki nemi yoğunlaştırır ve nozülden yayılan negatif negatif yüklü su iyonlarına atomize eder. Bu iyonlar saç kıllarını kapalı tutar ve saç ve saç derisinin derinliklerine nüfuz eder. Ayrıca kabarmayı önlemeye ve parlamayı arttırmaya yardımcı olan statik elektriği azaltır.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px; height: 281px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Ultra sessiz tasarımlı güçlü motor</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Anında kurutma için hızlı hava akışı</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Yüksek torklu, yüksek devirli motor, önde gelen Japon motor üreticisi Mabuchi Motor tarafından üretilir ve 6 kanat şeklinde bıçak içerir. Hızlı kuruma etkisi için 1,6 m³ hava debisi üretir. Her bıçak, motordaki gürültüyü azaltmak için dinamik bir denge testine tabi tutulur.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 0px 0px 3px; height: 281px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Premium termostat ve termal sigorta</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Çift aşırı ısınma koruma mekanizması</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Saç kurutma makinesinde çift aşırı ısınmaya karşı koruma mekanizması bulunur. Sıcaklık kontrol ünitesi, sıcaklığın güvenli bir seviyeyi aştığını tespit ettiğinde güç kaynağı otomatik olarak sonlandırılır. Bu arada, bir termal sigorta, aşırı sıcaklıklar durumunda elemana giden gücü keser.</p></div></td> </tr> </tbody> </table></div></div></div></div></div> <div style=""box-sizing: border-box; clear: both;""> </div></div></div></div> <div cel_widget_id=""aplus-module-4"" class=""celwidget aplus-module module-4"" style='box-sizing: border-box; min-width: 979px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: none; color: rgb(17, 17, 17); font-family: ""Amazon Ember"", Arial, sans-serif; font-size: 13px;'><div aria-live=""polite"" class=""a-expander-collapsed-height a-row a-expander-container a-expander-partial-collapse-container"" data-a-expander-collapsed-height=""700"" data-a-expander-name=""aplus-module-expander"" style=""box-sizing: border-box; width: 979px; overflow: hidden; position: relative; max-height: 700px;""><div aria-expanded=""false"" class=""a-expander-content a-expander-partial-collapse-content"" style=""box-sizing: border-box; overflow: hidden; position: relative;""><div class=""aplus-module-wrapper"" style=""box-sizing: border-box; text-align: inherit; display: inline-block;""><div class=""apm-spacing"" style=""box-sizing: border-box; float: left; zoom: 1;""><div class=""apm-floatleft apm-fixed-width"" style=""box-sizing: border-box; width: 969px; float: left;""><div class=""a-spacing-extra-large"" style=""box-sizing: border-box; margin-bottom: 26px !important;""><div class=""apm-spacing"" style=""box-sizing: border-box; float: left; zoom: 1;""><table class=""apm-fixed-width a-spacing-mini apm-fourthcol-table"" style=""box-sizing: border-box; margin-bottom: 6px !important; border-collapse: collapse; width: 969px; border-spacing: 0px;""> <tbody style=""box-sizing: border-box;""> <tr style=""box-sizing: border-box;""> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""2"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/b243b73b-9bb2-4dc2-bccb-aabee344b4e8.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/b243b73b-9bb2-4dc2-bccb-aabee344b4e8.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""7"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/4b3c5ad0-1c0b-4a49-ae62-5980de3d3a6c.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/4b3c5ad0-1c0b-4a49-ae62-5980de3d3a6c.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px 30px 0px 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""2"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/5e332bf5-e279-4b3c-a5e4-5b45150e147b.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/5e332bf5-e279-4b3c-a5e4-5b45150e147b.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> <th class=""apm-center"" style=""box-sizing: border-box; vertical-align: middle; text-align: center; padding: 0px; height: 234px; width: 220px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><p style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px;""><img alt=""12"" data-src=""https://images.hepsiburada.net/assets/ProductDescription/201912/da1c2ca9-b02f-4d8f-ad68-e5c3a6ea502c.jpg"" src=""https://images.hepsiburada.net/assets/ProductDescription/201912/da1c2ca9-b02f-4d8f-ad68-e5c3a6ea502c.jpg"" style=""box-sizing: border-box; max-width: 100%; border: none; vertical-align: top; display: block; margin: 0px auto;""/></p></div></th> </tr> <tr style=""box-sizing: border-box;""> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px 0px; height: 205px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">360 ° dönebilen manyetik başlık</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Hedeflenen stil</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Tamamen dönebilen manyetik nozül, hızlı kurutma ve hedeflenen şekillendirme için hava akışını yoğunlaştırır. Çift katmanlı tasarım, yanmaları önlemek için yüzey sıcaklığını önemli ölçüde azaltır.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px; height: 205px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Pürüzsüz UV kaplama</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Kir ve çizilmeye karşı dayanıklı</p> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Banyo ve tuvalet masası için ideal, beyaz kaplamalı klasik minimalist tasarım. Çift katmanlı kaplama, kire ve çizilmelere karşı dayanıklıdır ve pürüzsüz, pürüzsüz bir yüzeye sahiptir.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 3px 0px; height: 205px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Kompakt tasarım</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Hafif, ergonomik tasarım, daha uzun stil seanslarında bile rahat bir tutuş sağlar. Kompakt boyut saç kurutma makinesinin bagajda saklamasını ve taşımasını kolaylaştırır.</p></div></td> <td class=""apm-top"" style=""box-sizing: border-box; vertical-align: top; padding: 3px 0px 0px 3px; height: 205px;""><div class=""apm-fourthcol"" style=""box-sizing: border-box; width: 220px; float: left;""><h4 class=""a-spacing-mini"" style=""box-sizing: border-box; padding: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 6px !important; margin-left: 0px; text-rendering: optimizelegibility; font-weight: normal; font-size: 17px; line-height: 1.255; font-family: inherit;"">Mi İyonik Saç Kurutma Makinesi</h4> <p class=""a-size-small"" style=""box-sizing: border-box; padding: 0px; margin: 0px 0px 14px; line-height: 1.5 !important;"">Hızlı kurur ve saçlarınızı korumak için nem kaybını önler</p></div></td> </tr> </tbody> </table></div></div></div></div></div></div></div></div>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/xiaomi"" title=""Xiaomi"">Xiaomi</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Difüzör</th>
+<td>Var</td>
+</tr>
+<tr>
+<th>Güç</th>
+<td>1800 W</td>
+</tr>
+<tr>
+<th>Hız Ayarı</th>
+<td>2 Kademe</td>
+</tr>
+<tr>
+<th>Isı Ayarı</th>
+<td>2 Kademe</td>
+</tr>
+<tr>
+<th>Iyon</th>
+<td>Var</td>
+</tr>
+<tr>
+<th>Kullanım Tipi</th>
+<td>Standart</td>
+</tr>
+<tr>
+<th>Soğuk Hava</th>
+<td>Var</td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption>Diğer</caption>
+<tbody>
+<tr>
+<th>Garanti Süresi (Ay)</th>
+<td>24</td>
+</tr>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00000P42FX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/33/1000/10413783547954.jpg,https://productimages.hepsiburada.net/s/33/1000/10413783580722.jpg,https://productimages.hepsiburada.net/s/33/1000/10413783613490.jpg,https://productimages.hepsiburada.net/s/33/1000/10413783646258.jpg,https://productimages.hepsiburada.net/s/33/1000/10418829951026.jpg
+https://www.hepsiburada.com/dr-pen-m8-w-dermapen-cihazi-yurt-disindan-p-HBV00001496LX?magaza=First%20Sourcer,HB00001496LW,HBV00001496LX,True,Dr. Pen M8-W Dermapen Cihazı (Yurt Dışından),Dr. Pen,"535,75TL","595,28 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Dr. Pen M8-W Dermapen Cihazı (Yurt Dışından)
+<pre>*Dijital ekran
+*Kablosuz, şarjlı
+*Yüksek kalite metal kasa
+*0._2,5mm aralığında iğneleme 
+*6 kademeli çalışma hızı
+
+Dr Pen Ultima M8-W Çelik Gövdeli  (Salon Tipi  Profesyonel Micromeedle)
+
+Dr Pen M8-W Makinesi Serinin En Yeni Model Ve İnce İğne Tasarımlı Cihazıdır.
+
+ Sessiz Çalışır Swiss Motorludur, Vibrasyon Yaratmaz ŞARJLI + KABLOLU
+
+Çelik Gövdeli Mükemmel Tasarıma Sahip Olan Bu Cihaz Diğer DermaPen'lere Kıyasla Daha Uzun Ömürlü Kulanabilirsiniz
+
+Aynı Zamanda Bu Cihaz Şarj Edebilme Özelliğinede Sahiptir
+
+İsterseniz Kablolu İsterseniz Şarjlı Olarak Kullanabilirsiniz.
+
+ 
+
+Cihazın Açma Kapama Tuşu Sayesinde 6 Farklı Devirde Çalıştırabilirsiniz, Derinlik İğne Ayarı 0.25mm ile 2.5mm Derinliğe Ulaşabilir
+
+(Cihazın Hız Ayarını Açma Kapama Tuşundan Yapabilirsiniz)
+
+Dermapen, Bb Glow Kalıcı Fondöten Uygulamaları için Tasarlanmış Üst Seviye Profesyonel Bir Cihazdır
+
+Yeni Tip Kartuşlu İğne lidir, Ucu Hassar Ayar Yapabilme Özelliği
+
+Yeni Nesil Kartuşlu İğne, Kolay Sökülüp Takılır.
+
+CE Standartlarında Dermatest Onaylı Steril Paket
+
+Üretim Hatalarına Karşı 2 Yıl Mağaza Garantili
+
+ 
+
+ 
+
+Kullanım Alanları:
+- Akne ve kuru sivilce izlerinde,
+- Cilt lekeleri ve siyah noktalarda,
+- Kırışıklık ve anti aging uygulamalarında,
+- Göz altı torbaları ve morluklarında,
+- Sarkmaları gidermede ve cildi sıkılaştırmada,
+- Selülit, çatlak ve doğum izlerinde kullanılır.
+
+Dermapen Kullanımı:
+Elektrik kablosunu cihazın arka kısmında bulunan girişe takınız. Kullanmak istediğiniz 1,3,12 veya 36 pin iğne kartuşunu cihazın başına takıp hafifçe saat yönünde çeviriniz. Çevirme sırasında iğnenin tam olarak yerine oturduğundan emin olunuz. Takılan iğne başlığının hemen üstünde bulunan iğne ölçüsü ayarını, yapmak istediğiniz seansa uygun iğne uzunluğuna getiriniz. Örneğin; iğne uzunluğu 2.00mm olarak ayarlanmış ise, iğneler 2.00mm dışarı doğru çıkmalıdır.
+Açma kapama tuşuna uzun basıldığında cihaz çalışmaya başlar ve yine uzun basıldığında cihazın çalışması durur. Yine cihazın açma-kapama tuşu yardımı ile 5 kademeli hız ayarı yapılabilir. Bu cihaz, hem kablolu hem de şarjlı olarak kullanılabilmektedir. 
+
+ 
+
+Paket İçeriği
+
+1 Adet DR PEN ULTİMA M8W Şarjlı Dermapen Kalem ve Koruyucu Kılıfı
+
+2 Adet Titanyum 16pin Yeni Nesil Kartuşlu İğne
+
+1 Adet Cilt Bakım Ampul
+
+Adaptörü, USB kablosu 
+
+Kendi Özel Muhafaza Kutusunda</pre>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/drpen"" title=""Dr. Pen"">Dr. Pen</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00001496LX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11032681971762.jpg,https://productimages.hepsiburada.net/s/50/1000/11032682004530.jpg,https://productimages.hepsiburada.net/s/50/1000/11032682037298.jpg,N\A,N\A
+https://www.hepsiburada.com/mark-ryden-sirt-cantasi-laptop-notebook-cantasi-kilit-ve-usb-port-p-HBV0000104JHX?magaza=First%20Sourcer,HB0000104JHW,HBV0000104JHX,True,Mark Ryden Sirt Çantası Laptop Notebook Çantası (Kilit ve USB Port),Mark Ryden,"377,40TL","377,40 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Mark Ryden Sirt Çantası Laptop Notebook Çantası (Kilit ve USB Port)
+<p>Mark Ryden Sirt Cantasi Kilit ve USB Portlu</p>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/markryden"" title=""Mark Ryden"">Mark Ryden</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV0000104JHX</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/l/45/600-800/10852530749490.jpg,N\A,N\A,N\A,N\A
+https://www.hepsiburada.com/dr-pen-m8-c-dermapen-cihazi-yurt-disindan-p-HBV00001496LV?magaza=First%20Sourcer,HB00001496LU,HBV00001496LV,True,Dr. Pen M8-C Dermapen Cihazı (Yurt Dışından),Dr. Pen,"495,13TL","550,14 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Dr. Pen M8-C Dermapen Cihazı (Yurt Dışından)
+<pre>*Dijital ekran
+*Kablolu
+*Yüksek kalite metal kasa
+*0._2,5mm aralığında iğneleme 
+*6 kademeli çalışma hızı
+
+Dr pen ultima m8-c çelik gövdeli (salon tipi profesyonel micromeedle)
+
+Dr pen m8-c makinesi serinin en yeni model ve ince iğne tasarımlı cihazıdır.
+
+ sessiz çalışır swiss motorludur, vibrasyon yaratmaz kablolu
+
+Çelik gövdeli mükemmel tasarıma sahip olan bu cihaz diğer dermapen'lere kıyasla daha uzun ömürlü kulanabilirsiniz
+
+Aynı zamanda bu cihaz şarj edebilme özelliğinede sahiptir
+
+Isterseniz kablolu isterseniz şarjlı olarak kullanabilirsiniz.
+
+ 
+
+Cihazın açma kapama tuşu sayesinde 6 farklı devirde çalıştırabilirsiniz, derinlik iğne ayarı 0.25mm ile 2.5mm derinliğe ulaşabilir
+
+(cihazın hız ayarını açma kapama tuşundan yapabilirsiniz)
+
+Dermapen, bb glow kalıcı fondöten uygulamaları için tasarlanmış üst seviye profesyonel bir cihazdır
+
+Yeni tip kartuşlu iğne lidir, ucu hassar ayar yapabilme özelliği
+
+Yeni nesil kartuşlu iğne, kolay sökülüp takılır.
+
+Ce standartlarında dermatest onaylı steril paket
+
+Üretim hatalarına karşı 2 yıl mağaza garantili
+
+ 
+
+ 
+
+Kullanım alanları:
+
+- akne ve kuru sivilce izlerinde,
+
+- cilt lekeleri ve siyah noktalarda,
+
+- kırışıklık ve anti aging uygulamalarında,
+
+- göz altı torbaları ve morluklarında,
+
+- sarkmaları gidermede ve cildi sıkılaştırmada,
+
+- selülit, çatlak ve doğum izlerinde kullanılır.
+
+
+
+Dermapen kullanımı:
+
+Elektrik kablosunu cihazın arka kısmında bulunan girişe takınız.
+Kullanmak istediğiniz 1,3,12 veya 36 pin iğne kartuşunu cihazın başına takıp hafifçe saat yönünde çeviriniz.
+Çevirme sırasında iğnenin tam olarak yerine oturduğundan emin olunuz.
+Takılan iğne başlığının hemen üstünde bulunan iğne ölçüsü ayarını, yapmak istediğiniz seansa uygun iğne uzunluğuna getiriniz.
+Örneğin; iğne uzunluğu 2.00mm olarak ayarlanmış ise, iğneler 2.00mm dışarı doğru çıkmalıdır.
+Açma kapama tuşuna uzun basıldığında cihaz çalışmaya başlar ve yine uzun basıldığında cihazın çalışması durur.
+Yine cihazın açma-Kapama tuşu yardımı ile 5 kademeli hız ayarı yapılabilir.
+Bu cihaz, hem kablolu hem de şarjlı olarak kullanılabilmektedir. 
+ 
+
+Paket içeriği
+
+1 adet dr pen ultima m8w şarjlı dermapen kalem ve koruyucu kılıfı
+
+2 adet titanyum 16pin yeni nesil kartuşlu iğne
+
+1 adet cilt bakım ampul
+
+Adaptörü, usb kablosu 
+
+Kendi özel muhafaza kutusunda</pre>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/drpen"" title=""Dr. Pen"">Dr. Pen</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00001496LV</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11032681906226.jpg,https://productimages.hepsiburada.net/s/50/1000/11032681938994.jpg,N\A,N\A,N\A
+https://www.hepsiburada.com/xiaomi-mitu-isikli-ayarlanabilir-3-tekerlekli-scooter-sari-p-HBV00000UO6XZ?magaza=First%20Sourcer,HB00000UO6XW,HBV00000UO6XZ,True,Xiaomi Mitu Işıklı Ayarlanabilir 3 Tekerlekli Scooter Sarı,Xiaomi,"395,00TL","819,90 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Xiaomi Mitu Işıklı Ayarlanabilir 3 Tekerlekli Scooter Sarı
+<b style=""font-weight: bold;"">Xiaomi Ekosistemi ürünüdür, Xiaomi logosu bulunmamaktadır.</b><br/><div class=""container contain-lg-5 contain-md-4 contain-sm-5""> <div class=""row""> <div class=""col lg-5 md-5 sm-5"" style=""text-align:center;""> <img src=""https://images.hepsiburada.net/assets/EE/ProductDesc/HBV00000UO6XX.jpg"" style=""display:inline-block;""/> </div> </div></div>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/xiaomi"" title=""Xiaomi"">Xiaomi</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Yaş Aralığı</th>
+<td>2+ Yaş</td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption>Diğer</caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00000UO6XZ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/40/1000/10652044820530.jpg,https://productimages.hepsiburada.net/s/40/1000/10652044853298.jpg,https://productimages.hepsiburada.net/s/40/1000/10652044886066.jpg,https://productimages.hepsiburada.net/s/40/1000/10652044918834.jpg,https://productimages.hepsiburada.net/s/40/1000/10652044951602.jpg
+https://www.hepsiburada.com/xiaomi-masa-uzeri-akilli-led-lamba-p-HBV000005XPOH?magaza=First%20Sourcer,HB000005XPOG,HBV000005XPOH,True,Xiaomi Masa Üzeri Akıllı LED Lamba,Xiaomi,"320,40TL","399,90 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Xiaomi Masa Üzeri Akıllı LED Lamba
+<br/>
+Akıllı ev teknolojileri konusunda birbirinden harika çözümler sunan Xiaomi tarafından üretilen Akıllı LED Masa Lambası, ev ya da ofis ortamında masa başında çalışanlar için kusursuz bir konfor sunuyor. Wireless desteği sayesinden tamamen akıllı telefonlar üzerinden yönetilebilen Xiaomi Mi Akıllı LED Masa Lambası farklı renk, parlaklık seçeneklerine ayrıca okuma, PC gibi modlara sahip. Minimalist anlayışla tasarlanan lamba masanıza gerçek bir şıklık katacaktır.
+<br/>
+-------------------
+<br/><br/>
+<b>Ürün Özellikleri </b><br/><br/>
+•	Güç: 6W         						
+•	Giriş: AC 100 - 240V, 50 / 60Hz, 0.2A 
+•	Renk Sıcaklık Aralığı: 2700 - 6500K
+•	Parlaklık Aralığı: 1 -100pct
+•	Renk Tarama İndeksi: 83
+•	Çalışma Ömrü 25000 Saat
+•	Wireless Bağlantısı: Wi-Fi IEEE 802.11 b/g/n 2.4GHz<br/>
+•	Işık Rengi: Beyaz - Sarı
+•	Ürün Ağırlığı: 0.800 kg<br/>
+•	Ürün Boyutu: 15.00 x 44.50 x 44.50 cm
+<br/>
+<b> Kutu İçeriği  </b> <br/>
+•	1 x Xiaomi Mi Akıllı LED Masa Lambası 
+•	1 x Şarj Adaptörü ve Kablosu <br/>
+•	1 x Universal Priz Dönüştürücü 
+--------------------
+<br/>
+<b> Xiaomi Mi Akıllı LED Masa Lambası nasıl kullanılır? </b> 
+Akıllı LED Masa Lambası’nı üzerindeki buton sayesinde açıp - kapatabilir, hassas parlaklık ayarını yapabilirsiniz. Ayrıca MiHome uygulaması üzerinden akıllı telefonunuz  aracılığıyla çok daha ayrıntılı kontroller yapabilirsiniz. MiHome uygulaması ile ışık rengi, parlaklık gibi ayarları yapabilir, farklı kullanım modları ve zamanlama gibi fonksiyonları kullanabilirsiniz.<br/>
+Uygulamasını kullanabilmek için telefonlarınızın minimum işletim sitemi sürümü  iOS 7.0 ya da Android 4.0 olmalıdır.<br/>
+<b> Xiaomi Mi Akıllı LED Masa Lambası telefondan nasıl yönetilir? </b>
+MiHome uygulamasını telefonunuza yükledikten sonra telefon numaranız sayesinde kendinize bir Mi hesabı oluşturun ya da hesabınız varsa oturum açın. Xiaomi Mi Akıllı LED Masa Lambası’nı universal priz dönüştürücü ile prize bağlayın. MiHome uygulamasında sağ üst köşedeki “+” butonuna dokunarak etrafınızdaki Mi cihazlarını taratın. Xiaomi Mi Akıllı LED Masa Lambası’nı seçin ve açılan ekranda bağlı bulunduğunuz Wi-Fİ ağını seçin ardından Wi-Fi ağınızın şifresini girin ve Continue butonuna dokunun. Eşleşme saniyeler içerisinde tamamlanacaktır.<br/>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/xiaomi"" title=""Xiaomi"">Xiaomi</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Garanti Süresi (Ay)</th>
+<td>24</td>
+</tr>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV000005XPOH</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/4/1000/9651109134386.jpg,https://productimages.hepsiburada.net/s/4/1000/9651109167154.jpg,https://productimages.hepsiburada.net/s/4/1000/9658258325554.jpg,https://productimages.hepsiburada.net/s/4/1000/9658258358322.jpg,https://productimages.hepsiburada.net/s/4/1000/9658258391090.jpg
+https://www.hepsiburada.com/mark-ryden-laptop-notebook-sirt-cantasi-9299-l-usb-sarj-portlu-p-HBV00001493TZ?magaza=First%20Sourcer,HB00001493TY,HBV00001493TZ,True,Mark Ryden Laptop - Notebook Sırt Çantası 9299 L (Usb Sarj Portlu),Mark Ryden,"347,40TL","347,40 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Mark Ryden  Laptop - Notebook Sırt Çantası 9299 L (Usb Sarj Portlu)
+<pre>Sirt Cantasi  46*31*24cm</pre>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/markryden"" title=""Mark Ryden"">Mark Ryden</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Çanta Tipi</th>
+<td>Sırt Çantası</td>
+</tr>
+<tr>
+<th>Ekran Boyutu (inç)</th>
+<td>15.6</td>
+</tr>
+<tr>
+<th>Laptop Boyut Aralığı</th>
+<td>15 - 15,9 inç</td>
+</tr>
+<tr>
+<th>Renk</th>
+<td>Siyah</td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption>Diğer</caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00001493TZ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11032547754034.jpg,https://productimages.hepsiburada.net/s/50/1000/11032547786802.jpg,https://productimages.hepsiburada.net/s/50/1000/11032547819570.jpg,https://productimages.hepsiburada.net/s/50/1000/11032547852338.jpg,N\A
+https://www.hepsiburada.com/dr-pen-m7-c-dermapen-cihazi-yurt-disindan-p-HBV00001496LR?magaza=First%20Sourcer,HB00001496LQ,HBV00001496LR,True,Dr. Pen M7-C Dermapen Cihazı (Yurt Dışından),Dr. Pen,"379,11TL","421,23 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Dr. Pen M7-C Dermapen Cihazı (Yurt Dışından)
+<pre>Marka / Model: Dr.pen M7-C
+Gövde-Aksan: Çelik
+Hız: 13000Rpm (5 Kademe)
+Kullanım: Kablolu
+
+Cihazın Set İçeriği:
+1 adet mikro iğneleme cihazı
+1 adet 110/220v adaptör
+1 adet cihazın koruma kutusu
+1 adet Türkçe kullanım kılavuzu
+3 adet seçeceğiniz iğne kartuşu
+
+Dermapen Kullanımı:
+Adaptörü cihazın arka kısmında bulunan girişe takınız.
+İğne kartuşunu cihazın uç kısmına takıp hafifçe saat yönünde çevirip, oturtunuz.
+Takılan iğne kartuşunun üstündeki yuvarlak dönen kısımdan iğne ölçüsünü ayarlayınız.
+On/Off tuşuna uzunca basarak cihazı çalıştırabilirsiniz.
+On/Off tuşuna her kısa basmada çalışma hızı 1 kademe artacaktır, hız ayarı 5 kademelidir.
+Cihaz çalışırken on/off tuşuna uzunca basarak cihazı kapatabilirsiniz.
+
+Kullanım Alanları:
+Akne ve kuru sivilce izlerinde,
+Cilt lekeleri ve siyah noktalarda,
+Geniş gözenek ve cilt çukurlarında,
+Kırışıklık ve anti aging uygulamalarında,
+Göz altı torbaları ve morluklarında,
+Saç dökülmesini önleme ve saçları canlandırmada,
+Sarkmaları gidermede ve cildi sıkılaştırmada,
+Selülit, çatlak ve doğum izlerinde kullanılır.
+
+Dikkat:
+Açık yara olan bölgelerde kullanılmamalıdır.
+Aktif sivilce üzerinde kullanılmamalıdır.
+Egzama hastalığı olan kişilerde kullanılmamalıdır.
+Enfeksiyon kapmış kişilerde kullanılmamalıdır.
+Kan pıhtılaşması problemi yaşayan kişilerde kullanılmamalıdır.
+İğne kartuşu zarar görmüş veya kırılmış ise lütfen kullanmayınız.
+Dermapen iğneleri kişiye özeldir, farklı kişilerde aynı iğneyi kullanmayınız.
+Dermapen iğnesini her kullanım öncesi ve sonrası mutlaka dezenfekte ediniz.</pre>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/drpen"" title=""Dr. Pen"">Dr. Pen</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV00001496LR</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11032681676850.jpg,https://productimages.hepsiburada.net/s/50/1000/11032681709618.jpg,https://productimages.hepsiburada.net/s/50/1000/11032681742386.jpg,N\A,N\A
+https://www.hepsiburada.com/hutt-w66-cam-pencere-temizleme-silme-robotu-yurt-disindan-p-HBV000014LH31?magaza=First%20Sourcer,HB000014LH30,HBV000014LH31,True,Hutt W66 Cam Pencere Temizleme Silme Robotu (Yurt Dışından),Hutt,"1.885,00TL","1.885,00 TL","<div class=""list-item-detail product-detail box-container"" id=""tabProductDesc"">
+<table>
+<tr>
+<td class=""no-border"">
+<div id=""productDescriptionContent"">
+                                    Hutt W66 Cam Pencere Temizleme Silme Robotu (Yurt Dışından)
+<p>Product Mode： W66<br/> Rated Power: 90W<br/> Rated Voltage:24V<br/> Battery Capacity:650mAh<br/> Noice:50~60db<br/> Suction Power: 2600Pa<br/> Thickness:7.6cm<br/> Charging Time :2.2H<br/> Tank capacity :150ml</p> <p> </p> <p>Carton Size：373mm*136mm*286mmmm<br/> Machine Size: 231.5*231.5*76mm<br/> Gross Weight：3kg<br/> Net Weight：1.565kg<br/> Packing Quantity：1pcs</p>
+</div>
+</td>
+</tr>
+</table>
+<div id=""ctl00_ContentPlaceHolder1_ProductControl1_MainControl1_TabControl1_ProductDescription1_CustomContentBottom""></div>
+<table>
+<tr>
+<td class=""no-border"">
+<table>
+<tbody>
+<tr>
+<td>
+<div class=""tealium"">
+<div class=""cnet-integration"" id=""ccs-inline-content"">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<div id=""productTechSpecContainer"">
+<table class=""data-list tech-spec hidden"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Marka</th>
+<td><a href=""/hutt"" title=""Hutt"">Hutt</a></td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption></caption>
+<tbody>
+<tr>
+<th>Ağırlık (kg)</th>
+<td>1,3</td>
+</tr>
+<tr>
+<th>Aşılabilir Engel</th>
+<td>10 mm</td>
+</tr>
+<tr>
+<th>Boy</th>
+<td>373 mm</td>
+</tr>
+<tr>
+<th>Çalışma Modu Sayısı</th>
+<td>1</td>
+</tr>
+<tr>
+<th>Çalışma Süresi</th>
+<td>100 dk</td>
+</tr>
+<tr>
+<th>Derinlik</th>
+<td>100 mm</td>
+</tr>
+<tr>
+<th>Emiş Türü</th>
+<td>Islak</td>
+</tr>
+<tr>
+<th>En</th>
+<td>274 mm</td>
+</tr>
+<tr>
+<th>EPA/HEPA Filtre</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Kullanım Alanı</th>
+<td>Düz Zemin</td>
+</tr>
+<tr>
+<th>Pil Tipi</th>
+<td>Li-ion</td>
+</tr>
+<tr>
+<th>Renk</th>
+<td>Beyaz</td>
+</tr>
+<tr>
+<th>Ses Seviyesi (dB)</th>
+<td>40</td>
+</tr>
+<tr>
+<th>Siklon Filtre</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Su Tankı Kapasitesi (L)</th>
+<td>0,14 lt</td>
+</tr>
+<tr>
+<th>Şarj Süresi</th>
+<td>1.5 Saat</td>
+</tr>
+<tr>
+<th>Teknoloji</th>
+<td>2 Aşamalı Temizleme Sistemi</td>
+</tr>
+<tr>
+<th>Toz Kapasitesi</th>
+<td>0. 45 lt</td>
+</tr>
+</tbody>
+</table>
+<table class=""data-list tech-spec"">
+<caption>Diğer</caption>
+<tbody>
+<tr>
+<th>Garanti Süresi (Ay)</th>
+<td>24</td>
+</tr>
+<tr>
+<th>Yurt Dışı Satış</th>
+<td>Yok</td>
+</tr>
+<tr>
+<th>Stok Kodu</th>
+<td>HBV000014LH31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+<div>
+<span id=""captchaScriptCont""></span>
+<div class=""feedbackText"">
+<a data-bind=""click: feedback.showInaccurateContentPopup.bind($data.feedback)"" href=""javascript:;"" id=""inaccurate-content-link"">
+            Hatalı İçerik Bildir
+        </a>
+</div>
+<script id=""feedbackPopupTemplate"" type=""text/html"">
+        <div class=""feedback popup"" data-bind=""visible: !isDone(), css: {preLoader: isSending()}"">
+            <i data-bind=""click: closePopup"" class=""close""></i>
+            <span class=""title"">
+                Hatalı İ&#231;erik Bildir
+            </span>
+            <div class=""info"">
+                <div class=""product-name"">
+                    &#220;r&#252;n i&#231;eriğinin hatalı olduğunu d&#252;ş&#252;n&#252;yorsanız bize bildirerek g&#252;ncelleme talep edebilirsiniz.
+                </div>
+                <div class=""formArea"">
+                    <span class=""question"">Hata ne ile ilgili?</span>
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: feedbackItems,
+                                optionsText: 'text', value: selectedItem,
+                                optionsCaption: 'Lütfen Seçiniz',
+                                css: {'act': selectedItem, 'error': feedbackItemsErrorText().length > 0},
+                                event: {change: onChangeSelect}"">
+                            </select>
+                        </div>
+                        <!--ko if: feedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""html: feedbackItemsErrorText, css: {error: feedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+                    <!-- ko if: selectedItem -->
+                    <div class=""animateInput select-area"">
+                        <div class=""inputArea"">
+                            <select class=""select free"" data-bind=""options: subFeedbackItems,
+                               optionsText: 'text',
+                               value: selectedSubItem,
+                               optionsCaption: 'Hata tipini seçiniz',
+                               css: {'act': selectedSubItem, 'error': subFeedbackItemsErrorText().length > 0}""></select>
+                        </div>
+                        <!--ko if: subFeedbackItemsErrorText().length > 0 -->
+                        <span class=""field-error"" data-bind=""text: subFeedbackItemsErrorText, css: {error: subFeedbackItemsErrorText().length > 0}""></span>
+                        <!--/ko-->
+                    </div>
+
+                    <div class=""animateInput select-area"">
+                        <textarea class=""textarea free"" data-bind=""value: message, css: {'act': message}, valueUpdate: 'keyup'"" maxlength=""1000"" placeholder=""Açıklama (Opsiyonel)""></textarea>
+                        <span class=""count"" data-bind=""text: messageCount""></span>
+                    </div>
+                    <!--/ko-->
+                    <!-- ko if: isCaptchaActive -->
+                    <!--ko if: captchaErrorText().length > 0 -->
+                    <span class=""field-error captcha"" data-bind=""text: captchaErrorText, css: {error: captchaErrorText().length > 0}""></span>
+                    <!--/ko-->
+                    <div id=""feedbackCaptcha""></div>
+                    <!--/ko-->
+                    <div class=""button-container"">
+                        <button class=""button free"" data-bind=""click: send.bind($data)"">
+                            G&#246;nder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</div>",https://productimages.hepsiburada.net/s/50/1000/11049453715506.jpg,https://productimages.hepsiburada.net/s/50/1000/11049453748274.jpg,https://productimages.hepsiburada.net/s/50/1000/11049453781042.jpg,https://productimages.hepsiburada.net/s/50/1000/11049453813810.jpg,N\A
