@@ -13,7 +13,7 @@ prod_urls, prod_ids, prod_skus, prod_in_stocks = [], [], [], []
 new_prices, original_prices = [], []
 
 ## loop which will extract Products URLs and some more info from the 50 desired pages
-for page_num in range(51)[:3]:
+for page_num in range(51)[:]:
     url = f'https://www.hepsiburada.com/magaza/first-sourcer?sayfa={page_num}'
 
     site = requests.get(url, headers=headers)
@@ -60,7 +60,7 @@ prod_urls = list(set(df1.ProductURL))
 
 print('\n\n\n', 'A total of ', len(prod_urls), ' product URLs were extracted.')
 print('Now visiting each products webpage individually. This may take 5-10 minuts')
-print('(It is possible that few products may give an error but that should be ignored)\n\n\nProcessing')
+print('(It is possible that few products may give an error but that should be ignored)\n\n\nProcessing..')
 
 
 ## inializing empty arrays which will be populated when data will scraped
@@ -109,7 +109,7 @@ def scrapify(url):
 
 ## Using multi-threading(4 requests at a time) to speed up the scraping process
 pool = ThreadPool(4)
-results = pool.map(scrapify, prod_urls[:50])
+results = pool.map(scrapify, prod_urls[:])
 
 ## creating another dataframe out of previously scraped data
 df2 = pd.DataFrame({
