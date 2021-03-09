@@ -1,4 +1,4 @@
-## libraries import
+## if you dont have bs4 library, enter this command in cmd: pip install bs4
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
@@ -220,6 +220,6 @@ for index, srcs in enumerate(all_images_urls):
 
 new_df.to_csv('HepsiBurada_complete.csv', index=False)
 
-print('\n\nExtraction completed successfully and results stored in HepsiBurada_complete.csv')
-input()
+print('\n\nExtraction completed successfully and results stored in HepsiBurada_complete.csv\n')
+print('You may exit the program now. Have a good day')
 input()
