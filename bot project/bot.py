@@ -9,8 +9,6 @@ import random
 from bs4 import BeautifulSoup
 import os
 import pandas as pd
-import re
-import openpyxl
 import json
 import shutil
 from pathlib import Path
@@ -217,7 +215,7 @@ for index_unpack, customer_name_unpack in enumerate(customer_name_array_unpack):
                         # unpacked
                         'Customer Name Unpacked': customer_name_unpack,
                         'Order No': order_no_array_unpack[index_unpack],
-                        'Prdoduct Name': prod_name_array_unpack[index_unpack],
+                        'Product Name': prod_name_array_unpack[index_unpack],
                         'Product Price': price_array_unpack[index_unpack],
 
                         # packed
