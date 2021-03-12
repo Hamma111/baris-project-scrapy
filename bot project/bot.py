@@ -74,9 +74,11 @@ options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 dr = webdriver.Chrome(options=options)
 
+_ = os.system('cls')
 
 dr.get('https://merchant.hepsiburada.com/v2/dashboard')
-print('Attempting to log in')
+_ = os.system('cls')
+print('\nAttempting to log in')
 
 sleep(0.8)
 dr.find_element_by_tag_name('body').send_keys(Keys.PAGE_DOWN)
@@ -93,20 +95,22 @@ dr.find_element_by_id('submit-login').click()
 sleep(1)
 
 try:
-    WebDriverWait(dr, 10).until(
+    WebDriverWait(dr, 15).until(
         EC.visibility_of_element_located((By.CLASS_NAME, "dashboardContainer"))
     )
     print('Logged in successfully.')
 except:
-    print('Automated Login failed. Please try to log in manually')
-    input('\n\nPress enter here when you have logged in')
+    print('\nAutomated Login failed. Please try to log in manually')
+    input('\nPress enter here when you have logged in: ')
+    print('verifying login')
+    try:
+        WebDriverWait(dr, 10).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, "dashboardContainer"))
+        )
+        print('Logged in successfully.')
+    except:
+        input('The program couldnt detect that you have logged.\nPlease log in again and press enter here')
 
-try:
-    WebDriverWait(dr, 10).until(
-        EC.visibility_of_element_located((By.CLASS_NAME, "dashboardContainer"))
-    )
-except:
-    input('The program couldnt detect that you have logged.\nPlease log in again and press enter here')
 
 dr.get('https://merchant.hepsiburada.com/fulfilment/to-be-packed')
 sleep(2)
@@ -114,32 +118,54 @@ dr.switch_to.active_element.send_keys(Keys.ESCAPE)
 sleep(1)
 scrollToBottom()
 
-## getting UNPACKED data
-soup = BeautifulSoup(dr.page_source, 'lxml')
-
 customer_name_array_unpack, order_no_array_unpack = [], []
 prod_name_array_unpack, price_array_unpack = [], []
 
-unpackeds = soup.findAll('div', {'class': 'order-row orders-page__item'})
+debgug_load_input = input('Do you want to load previous results?(y/n) ')
 
-for item in unpackeds:
-    customer_name = item.find(text='Müşteri Bilgileri').next.text
-    order_no = item.find(text='Sipariş No').next.text
-    prod_name = item.find('span', {'class': 'product-card__name'}).getText('', True)
-    price = item.find('span', {'class': 'summary-row__total-price__amount'}).getText('', True)
+if debgug_load_input == 'y' or debgug_load_input == 'Y':
+    print('previous products restored')
+    df_loaded = pd.read_csv('debug.csv')
+    customer_name_array_unpack = df_loaded['customer_name_array_unpack']
+    order_no_array_unpack = df_loaded['order_no_array_unpack']
+    prod_name_array_unpack = df_loaded['prod_name_array_unpack']
+    price_array_unpack = df_loaded['price_array_unpack']
+    print('previous products restored')
 
-    customer_name_array_unpack.append(customer_name)
-    order_no_array_unpack.append(order_no)
-    prod_name_array_unpack.append(prod_name)
-    price_array_unpack.append(price)
+else:
+    ## getting UNPACKED data
+    soup = BeautifulSoup(dr.page_source, 'lxml')
+    unpackeds = soup.findAll('div', {'class': 'order-row orders-page__item'})
+    for item in unpackeds:
+        customer_name = item.find(text='Müşteri Bilgileri').next.text
+        order_no = item.find(text='Sipariş No').next.text
+        prod_name = item.find('span', {'class': 'product-card__name'}).getText('', True)
+        price = item.find('span', {'class': 'summary-row__total-price__amount'}).getText('', True)
 
-print('\n PLEASE PACK THE ITEMS\n')
-_ = input('Press enter here when you are done')
+        customer_name_array_unpack.append(customer_name)
+        order_no_array_unpack.append(order_no)
+        prod_name_array_unpack.append(prod_name)
+        price_array_unpack.append(price)
+
+    df_debug = pd.DataFrame({'customer_name_array_unpack': customer_name_array_unpack,
+                             'order_no_array_unpack': order_no_array_unpack,
+                             'prod_name_array_unpack': prod_name_array_unpack,
+                             'price_array_unpack': price_array_unpack
+                             })
+
+    df_debug.to_csv('dubug.csv', index=False)
+
+    print('\n PLEASE PACK THE ITEMS\n')
+    _ = input('Press enter here when you are done')
+
+
+print('\n\nVisiting packed products now..\n')
 
 
 ## going to PACKED data and comparing UNPACKED and extracting relevant products' information
 dr.get('https://merchant.hepsiburada.com/fulfilment/ready-to-ship')
 scrollToBottom()
+
 customer_name_array_pack, delivery_no_array_pack, index_array_pack = [], [], []
 pdf_name_array = []
 soup = BeautifulSoup(dr.page_source, 'lxml')
@@ -166,7 +192,6 @@ for index_unpack, customer_name_unpack in enumerate(customer_name_array_unpack):
                     )
                     sleep(3)
 
-
                     # comparing order numbers to be 100% sure than packed and unpacked order matches
                     soup_ = BeautifulSoup(dr.page_source, 'lxml')
                     soup_.find(text='Sipariş Numarası')
@@ -176,14 +201,14 @@ for index_unpack, customer_name_unpack in enumerate(customer_name_array_unpack):
 
                     # click on "Proforma Görüntüle/Yazdır" => to save performa
                     dr.find_element_by_xpath("//button[@class='solo-button solo-button--small solo-button--style-ghost']").click()
-                    sleep(3)
+                    sleep(2)
                     #wait for print to load
                     WebDriverWait(dr, 15).until(
                         EC.visibility_of_element_located(
                             (By.XPATH,
                              "//button[@class='solo-button print-proforma-label__actions__button solo-button--style-primary']"))
                     )
-                    sleep(2)
+                    sleep(3)
 
                     # saving source html which will be scraped for individual values at the end of loop
                     soup = BeautifulSoup(dr.page_source, 'lxml')
