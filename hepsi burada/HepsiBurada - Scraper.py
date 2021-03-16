@@ -218,7 +218,10 @@ for index, srcs in enumerate(all_images_urls):
                 'Image Position': i+1
             }, ignore_index = True)
 
-new_df.to_csv('HepsiBurada_complete.csv', index=False)
+
+### you may change the file's name whatever you want
+csv_file_name = 'HepsiBurada_complete.csv'
+new_df.to_csv(csv_file_name, index=False)
 
 print('\n\nExtraction completed successfully and results stored in HepsiBurada_complete.csv\n')
 print('You may exit the program now. Have a good day')
