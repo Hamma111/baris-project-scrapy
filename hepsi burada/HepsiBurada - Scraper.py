@@ -220,8 +220,8 @@ for index, srcs in enumerate(all_images_urls):
 
 
 ### you may change the file's name whatever you want
-csv_file_name = 'HepsiBurada_complete.csv'
-new_df.to_csv(csv_file_name, index=False)
+csv_file_name = 'HepsiBurada_complete_test.csv'
+new_df.drop_duplicates().to_csv(csv_file_name, index=False)
 
 print('\n\nExtraction completed successfully and results stored in HepsiBurada_complete.csv\n')
 print('You may exit the program now. Have a good day')
