@@ -11,9 +11,10 @@ headers = {'User-Agent': 'My User Agent 1.0'}
 ## inializing empty arrays which will be populated when data will scraped
 prod_urls, prod_ids, prod_skus, prod_in_stocks = [], [], [], []
 new_prices, original_prices = [], []
+num_pages_list = 5 # 51
 
 ## loop which will extract Products URLs and some more info from the 50 desired pages
-for page_num in range(51)[:]:
+for page_num in range(num_pages_list)[:]:
     url = f'https://www.hepsiburada.com/magaza/first-sourcer?sayfa={page_num}'
 
     site = requests.get(url, headers=headers)
@@ -221,6 +222,7 @@ for index, srcs in enumerate(all_images_urls):
 
 ### you may change the file's name whatever you want
 csv_file_name = 'HepsiBurada_complete_test.csv'
+
 new_df.drop_duplicates().to_csv(csv_file_name, index=False)
 
 print('\n\nExtraction completed successfully and results stored in HepsiBurada_complete.csv\n')
