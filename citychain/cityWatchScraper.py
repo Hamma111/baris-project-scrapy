@@ -24,7 +24,7 @@ print('fetching product links from various categories...')
 for i, link in enumerate(links):
     site = requests.get(link)
 
-    soup = BeautifulSoup(site.content)
+    soup = BeautifulSoup(site.content, 'lxml')
 
     items = soup.findAll('div', {"class": "w_pro_pic22 pro_letter"})
     titles = [x.text for x in soup.findAll('div', {'class': 'w_pro_text22'})]
@@ -62,7 +62,7 @@ for i, link in enumerate(links):
 def scrapFunc(url):
     try:
         site = requests.get(url)
-        soup = BeautifulSoup(site.content)
+        soup = BeautifulSoup(site.content, 'lxml')
 
         all_images_tags = soup.find('ul', {'id':"ulImgList"}).findAll('li')
         img_url_1 = all_images_tags[0].find('img')['src'].replace('48x57', '700x650')
