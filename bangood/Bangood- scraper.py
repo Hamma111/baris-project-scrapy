@@ -114,9 +114,11 @@ def scrape():
     specs = ''
     trim_found = False
     try:
+        specs_html = soup.find('div', {'class': 'tab-cnt'})
         specs = soup.find('div', {'class': 'tab-cnt'}).text.split('Trim\nEngine')[1].strip()
         trim_found = True
     except:
+        specs_html = ''
         print('Trim not found')
     if trim_found:
         try:
@@ -161,6 +163,7 @@ def scrape():
                             img_s[8],
                             img_s[9],
                             specs,
+                            specs_html,
                             url
                          ]
     loop_counter+=1
@@ -181,7 +184,7 @@ for url in links_list[loop_counter:3]:
 	print('--------------------------------------------------------')
 
 import pandas as pd
-df_links = pd.DataFrame.from_dict(items, orient='index', columns=["Title","Price","Brand","image1","image2","image3","image4","image5","image6","image7","image8","image9","image10","specs","Link"])
+df_links = pd.DataFrame.from_dict(items, orient='index', columns=["Title","Price","Brand","image1","image2","image3","image4","image5","image6","image7","image8","image9","image10","specs", "specs(HTML)","Link"])
 # df_links.to_csv("output.csv",  index = False)
 
 
@@ -243,7 +246,7 @@ for x in df_links['Images']:
     all_images_urls.append(x.split(' ') )
 
 
-new_df = pd.DataFrame(columns=['Handle', 'Title', 'Brand', 'Price', 'specs',
+new_df = pd.DataFrame(columns=['Handle', 'Title', 'Brand', 'Price', 'specs', 'specs(HTML)',
                              'Link', 'Image Src', 'Image Position'
                             ])
 
@@ -256,6 +259,7 @@ for index, srcs in enumerate(all_images_urls):
                 'Brand': df_links.loc[index, 'Brand'],
                 'Price': df_links.loc[index, 'Price'],
                 'specs': df_links.loc[index, 'specs'],
+                'specs(HTML)': df_links.loc[index, 'specs(HTML)'],
                 'Link': df_links.loc[index, 'Link'],
                 'Image Src':x,
                 'Image Position': i+1
@@ -267,6 +271,7 @@ for index, srcs in enumerate(all_images_urls):
                 'Brand': '',
                 'Price': '',
                 'specs': '',
+                'specs(HTML)': '',
                 'Link': '',
                 'Image Src':x,
                 'Image Position': i+1
