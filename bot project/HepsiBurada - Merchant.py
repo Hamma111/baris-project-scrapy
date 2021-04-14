@@ -82,16 +82,20 @@ print('\nAttempting to log in')
 
 sleep(0.8)
 dr.find_element_by_tag_name('body').send_keys(Keys.PAGE_DOWN)
-sleep(0.4)
+WebDriverWait(dr, 5).until(
+    EC.visibility_of_element_located((By.ID, "username"))
+)
+sleep(1)
 for x in USERNAME:
-    dr.find_element_by_id('login-username').send_keys(x)
+    dr.find_element_by_id('username').send_keys(x)
     sleep(random.uniform(0.01, 0.2))
 
 for x in PASSWORD:
-    dr.find_element_by_id('login-password').send_keys(x)
+    dr.find_element_by_id('password').send_keys(x)
     sleep(random.uniform(0.01, 0.2))
 sleep(0.5)
-dr.find_element_by_id('submit-login').click()
+dr.find_element_by_id('password').send_keys(Keys.ENTER)
+# dr.find_element_by_id('submit-login').click()
 sleep(1)
 
 try:
@@ -261,7 +265,7 @@ df.to_excel(EXCEL_FILE_NAME, index=False)
 
 
 ## To move downloaded files from downloads to our pdf folder
-pdf_in_dwnlds = [x for x in os.listdir(SYSTEM_DOWNLOAD_FOLDER) if "Kargoya Teslim Edilecek Siparişler - Hepsiburada" in x]
+pdf_in_dwnlds = [x for x in os.listdir(SYSTEM_DOWNLOAD_FOLDER) if "Sipariş Yönetimi _ Gönderime hazır - Hepsiburada.pdf" in x]
 temps = sorted(pdf_in_dwnlds)
 pdf_in_dwnlds = []
 pdf_in_dwnlds.append(temps[-1])
@@ -272,5 +276,4 @@ for i, x in enumerate(pdf_in_dwnlds):
     destination = PDF_DOWNLOAD_PATH + pdf_name_array[i]
     shutil.move(source, destination)
 
-print('\nData extracted and downloaded the pdf file successfully.')
-
+print('\nData extracted and downloaded the pdf file successfully.') 
