@@ -11,13 +11,16 @@ URL = 'https://www.banggood.com/Wholesale-Cleaning-Appliances-ca-9002.html?brand
 
 
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+# path = r"chromedriver.exe"
 
-path = r"chromedriver.exe"
-
-options = webdriver.ChromeOptions()
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
-
-driver = webdriver.Chrome( options=options,executable_path=path)
+options = Options()
+options.add_argument("--disable-blink-features")
+options.add_argument("--disable-blink-features=AutomationControlled")
+options.add_argument("start-maximized")
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+options.add_experimental_option('useAutomationExtension', False)
+driver = webdriver.Chrome( options=options)
 
 
 # In[26]:

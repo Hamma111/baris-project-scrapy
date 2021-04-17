@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Access to uploaded files</title>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="container">
+      <h2>Checking your access...</h2>
+      <p>You have to be <b>ha**********@gmail.com</b> to access this file</p>
+      <div id="loading">Loading...</div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info">
+              <div id="photo-container">
+                <img id="photo">
+              </div>
+              <div id="name"></div>
+              <div id="email"></div>
+              <div id="matched"></div>
+              <div class="clearfix"></div>
+            </div>
+            <p>
+              <button id="sign-out">Sign Out</button>
+            </p>
+          </div>
+          <div id="user-signed-out" class="hidden">
+            <h4>You are signed out.</h4>
+            <div id="firebaseui-spa">
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+window.UploadConfig = {
+  editors:[{"email":"ha**********@gmail.com","code":-1114154875}],
+  hashCode:function (str)
+	{
+		var hash = 0, i, chr;
+		if (str.length === 0) return hash;
+		for (i = 0; i < str.length; i++)
+		{
+			chr   = str.charCodeAt(i);
+			hash  = ((hash << 5) - hash) + chr;
+			hash |= 0; // Convert to 32bit integer
+		}
+		return hash;
+	}
+};
+
+var config = {
+  apiKey: "AIzaSyCcbdBCI-Kgcz3tE1N4paeF9a-vdi3Uzz8",
+  authDomain: location.hostname=='localhost'?'formfacade.firebaseapp.com':location.hostname,
+  databaseURL: "https://formfacade.firebaseio.com",
+  projectId: "formfacade",
+  storageBucket: "formfacade.appspot.com",
+  messagingSenderId: "743872305260",
+  appId: "1:743872305260:web:c5f7c23ccfa724447be049"
+};
+
+firebase.initializeApp(config);
+
+// Google OAuth Client ID, needed to support One-tap sign-up.
+// Set to null if One-tap sign-up is not supported.
+var CLIENT_ID = null;
+
+function getRecaptchaMode() {
+  var config = parseQueryString(location.hash);
+  return config['recaptcha'] === 'invisible' ?
+      'invisible' : 'normal';
+}
+
+
+/**
+ * @return {string} The email signInMethod from the configuration.
+ */
+function getEmailSignInMethod() {
+  var config = parseQueryString(location.hash);
+  return config['emailSignInMethod'] === 'password' ?
+      'password' : 'emailLink';
+}
+
+
+/**
+ * @param {string} queryString The full query string.
+ * @return {!Object<string, string>} The parsed query parameters.
+ */
+function parseQueryString(queryString) {
+  // Remove first character if it is ? or #.
+  if (queryString.length &&
+      (queryString.charAt(0) == '#' || queryString.charAt(0) == '?')) {
+    queryString = queryString.substring(1);
+  }
+  var config = {};
+  var pairs = queryString.split('&');
+  for (var i = 0; i < pairs.length; i++) {
+    var pair = pairs[i].split('=');
+    if (pair.length == 2) {
+      config[pair[0]] = pair[1];
+    }
+  }
+  return config;
+}
+
+function getUiConfig() {
+  return {
+    'callbacks': {
+      // Called when the user has been successfully signed in.
+      'signInSuccessWithAuthResult': function(authResult, redirectUrl) {
+        if(authResult.user)
+          handleSignedInUser(authResult.user);
+        return false;
+      }
+    },
+    'signInFlow': 'popup',
+    'signInOptions': [
+      {
+        provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        clientId: CLIENT_ID
+      }
+    ],
+    'tosUrl': 'https://formfacade.com/website/privacy.html',
+    'privacyPolicyUrl': 'https://formfacade.com/website/privacy.html',
+    'credentialHelper': firebaseui.auth.CredentialHelper.GOOGLE_YOLO
+  };
+}
+
+// Initialize the FirebaseUI Widget using Firebase.
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+//ui.disableAutoSignIn();
+
+/**
+ * @return {string} The URL of the FirebaseUI standalone widget.
+ */
+function getWidgetUrl() {
+  return '/widget#recaptcha=' + getRecaptchaMode() + '&emailSignInMethod=' +
+      getEmailSignInMethod();
+}
+
+
+/**
+ * Redirects to the FirebaseUI widget.
+ */
+var signInWithRedirect = function() {
+  window.location.assign(getWidgetUrl());
+};
+
+
+/**
+ * Open a popup with the FirebaseUI widget.
+ */
+var signInWithPopup = function() {
+  window.open(getWidgetUrl(), 'Sign In');
+};
+
+
+/**
+ * Displays the UI for a signed in user.
+ * @param {!firebase.User} user
+ */
+var handleSignedInUser = function(user)
+{
+  document.getElementById('user-signed-in').style.display = 'block';
+  document.getElementById('user-signed-out').style.display = 'none';
+  document.getElementById('name').textContent = user.displayName;
+  document.getElementById('email').textContent = user.email;
+  if(user.photoURL) 
+  {
+    var photoURL = user.photoURL;
+    document.getElementById('photo').src = photoURL;
+    document.getElementById('photo').style.display = 'block';
+  } 
+  else
+  {
+    document.getElementById('photo').style.display = 'none';
+  }
+  var logcode = UploadConfig.hashCode(user.email.toLowerCase());
+  var matched = UploadConfig.editors.filter(eml=>eml.code==logcode);
+  var matchedelm = document.getElementById('matched');
+  if(matched.length>0)
+  {
+    matchedelm.style.color = 'green';
+    matchedelm.textContent = 'You have access. Fetching file...';
+    firebase.auth().currentUser.getIdToken(true).then(function(idToken){
+      location.href = location.href.split('?')[0]+'?idToken='+idToken;
+    });
+  }
+  else
+  {
+    matchedelm.style.color = 'red';
+    matchedelm.textContent = 'You do not have access. Sign out & login as an editor of this form.';
+  }
+};
+
+
+/**
+ * Displays the UI for a signed out user.
+ */
+var handleSignedOutUser = function() {
+  document.getElementById('user-signed-in').style.display = 'none';
+  document.getElementById('user-signed-out').style.display = 'block';
+  ui.start('#firebaseui-container', getUiConfig());
+};
+
+// Listen to change in auth state so it displays the correct UI for when
+// the user is signed in or not.
+firebase.auth().onAuthStateChanged(function(user) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('loaded').style.display = 'block';
+  user ? handleSignedInUser(user) : handleSignedOutUser();
+});
+
+/**
+ * Deletes the user's account.
+ */
+var deleteAccount = function() {
+  firebase.auth().currentUser.delete().catch(function(error) {
+    if (error.code == 'auth/requires-recent-login') {
+      // The user's credential is too old. She needs to sign in again.
+      firebase.auth().signOut().then(function() {
+        // The timeout allows the message to be displayed after the UI has
+        // changed to the signed out state.
+        setTimeout(function() {
+          alert('Please sign in again to delete your account.');
+        }, 1);
+      });
+    }
+  });
+};
+
+
+/**
+ * Handles when the user changes the reCAPTCHA or email signInMethod config.
+ */
+function handleConfigChange() {
+  var newRecaptchaValue = document.querySelector(
+      'input[name="recaptcha"]:checked').value;
+  var newEmailSignInMethodValue = document.querySelector(
+      'input[name="emailSignInMethod"]:checked').value;
+  location.replace(
+      location.pathname + '#recaptcha=' + newRecaptchaValue +
+      '&emailSignInMethod=' + newEmailSignInMethodValue);
+
+  // Reset the inline widget so the config changes are reflected.
+  ui.reset();
+  ui.start('#firebaseui-container', getUiConfig());
+}
+
+
+/**
+ * Initializes the app.
+ */
+var initApp = function() {
+  document.getElementById('sign-out').addEventListener('click', function() {
+    firebase.auth().signOut();
+  });
+};
+
+window.addEventListener('load', initApp);
+    </script>
+    <style type="text/css">
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:Roboto, arial, sans-serif;
+}
+
+#container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+#user-info {
+  border: 1px solid #CCC;
+  clear: both;
+  margin: 0 auto 20px;
+  max-width: 400px;
+  padding: 10px;
+  text-align: left;
+}
+
+#photo-container {
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  float: left;
+  height: 80px;
+  margin-right: 10px;
+  width: 80px;
+}
+
+#photo {
+  height: 80px;
+  margin: 0;
+  width: 80px;
+}
+
+#matched{ padding-top:10px; }
+
+@media (max-width: 300px) {
+  #photo-container,
+  #photo {
+    height: 40px;
+    width: 40px;
+  }
+}
+    </style>
+  </body>
+</html>
