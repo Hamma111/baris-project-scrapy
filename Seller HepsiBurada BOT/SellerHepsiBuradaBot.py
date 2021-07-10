@@ -10,6 +10,8 @@ import requests
 import os
 from datetime import datetime
 
+# THIS VERSION INCLUDES FILTERING THE ORDERS, PACKING THEM UP AND TRAVERSING THEM
+
 
 # setting global variables. These may be changed when needed manually when needed
 USERNAME = 'barissonmezee@gmail.com'
