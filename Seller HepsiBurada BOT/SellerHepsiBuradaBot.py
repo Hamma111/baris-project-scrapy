@@ -8,10 +8,12 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from time import sleep
 import requests
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
-# THIS VERSION INCLUDES FILTERING THE ORDERS, PACKING THEM UP AND TRAVERSING THEM
-
+# CHANGE THIS VARIABLE TO ADJUST DAYS.
+# VALUE OF 3 WOULD MEAN THE DATA FOR PACKAGES OF TODAY AND 2 DAYS BEFORE WILL BE DOWNLOADED
+# VALUE OF 2 WOULD MEAN DATA OF ONLY TODAY AND YESTERDAY.
+NUM_DAYS = 3
 
 # setting global variables. These may be changed when needed manually when needed
 USERNAME = 'barissonmezee@gmail.com'
@@ -112,135 +114,45 @@ def verify_log_in():
         return False
 
 
-def is_item_packable():
-    """
-    This function ensures that item is packable.
-    :return: True or False depending on the state of item order
-    """
-    try:
-        WebDriverWait(dr, 5).until(
-            EC.visibility_of_element_located((By.XPATH, "//td[contains(text(),'There is no packable items.')]")))
+def date_verifier():
+    package_date = WebDriverWait(dr, 10).until(EC.visibility_of_element_located(
+        (By.XPATH, "//label[contains( text(), ' Created at:' )]/following-sibling::label"))).text
+    package_date = datetime.strptime(package_date.split()[0], "%m/%d/%Y")
+    if package_date + timedelta(days=NUM_DAYS) >= datetime.today():
+        return True
+    else:
         return False
-    except:
-        try:
-            WebDriverWait(dr, 5).until(
-                EC.visibility_of_element_located((By.XPATH, "//div[contains(text(),'There is no packable items.')]")))
-            return False
-        except:
-            return True
 
 
-def traverse_orders_page():
+def get_customer_name(order_number):
     """
-    This function paginates the orders pages and extracts the order number of all the items
-    :return: 1. (list/array) The order numbers of all the items present on the "orders" page(s)
-    2. (list/array) The customer names of all the items present on the "orders" page(s)
-    """
-    WebDriverWait(dr, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "icon-pagination")))
-
-    NUM_PAGES = int(dr.find_element_by_class_name("icon-pagination").text.split()[-2])
-    order_number_array = []
-    customer_name_array = []
-
-    # Extracting order numbers of all the items
-    for page_num in range(1, NUM_PAGES + 1):
-        dr.find_elements_by_xpath("//ul[contains(@class,'vx-pagination icon-pagination')]//li")[page_num].click()
-        sleep(5)
-        try:
-            assert str(page_num) == dr.find_element_by_xpath(
-                "//ul[contains(@class,'vx-pagination icon-pagination')]//li[""@class='active']").text
-        except AssertionError:
-            print("Page traversal failed. Exiting the code")
-            exit()
-
-        order_number_array += [el.text.split()[0] for el in
-                               dr.find_elements_by_xpath("//div[@class='table-responsive']//tr")[1:]]
-        customer_name_array += [" ".join(el.text.split()[2:-3]) for el in
-                                dr.find_elements_by_xpath("//div[@class='table-responsive']//tr")[1:]]
-
-    return order_number_array, customer_name_array
-
-
-def pack_items(order_number_array, customer_name_array):
-    """
-    This function Creates packages for all the order numbers of the items
-    :param (list/array) order_number_array: The array which hold all the order numbers
-    :return: 1. (list/array) The order numbers of items that were packaged successfully
-    """
-    orders_packed = []
-    customer_name_packed = []
-    for index, order_number in enumerate(order_number_array):
-        dr.get(f"https://seller.hepsiglobal.com/order/{order_number}")
-        # ensures that item is packable to prevent the code from breaking
-        if not is_item_packable():
-            continue
-
-        # create package
-        WebDriverWait(dr, 5).until(
-            (lambda dr: len(dr.find_elements_by_xpath("//label[@class='custom-control-label']")) == 2))
-        dr.find_elements_by_xpath("//label[@class='custom-control-label']")[0].click()
-
-        dr.find_elements_by_class_name("btn.btn-success")[0].click()
-
-        # Confirming the package
-        WebDriverWait(dr, 4).until(
-            EC.element_to_be_clickable((By.XPATH, "//div[@class='swal2-actions']//button")))
-        dr.find_element_by_xpath("//div[@class='swal2-actions']//button").click()
-
-        # Ensuring that package was created successfully
-        WebDriverWait(dr, 15).until(
-            EC.visibility_of_element_located((By.XPATH, "//h2[@class='swal2-title' and contains(text(), 'Success')]")))
-
-        orders_packed.append(order_number)
-        customer_name_packed.append(customer_name_array[index])
-
-    return orders_packed, customer_name_packed
-
-
-def filter_package(order_number):
-    """
-    This function performs the act of filtering the packages based on the order number, and returns the unique package
-    identifier allotted to the packaged order
+    returns customer name
     :param order_number: Item's order number (which have been packaged previously)
-    :return: (string) The package number (item's unique package identifier number)
+    :return: (string) The order number (item's unique package identifier number)
     """
+    dr.get("https://seller.hepsiglobal.com/orders")
     WebDriverWait(dr, 10).until(EC.element_to_be_clickable((By.XPATH, "//span[contains(text(),'Filter')]")))
     dr.find_element_by_xpath("//span[contains(text(),'Filter')]").click()
 
-    WebDriverWait(dr, 10).until(EC.element_to_be_clickable((By.ID, "order_id")))
-    dr.find_element_by_id("order_id").send_keys(Keys.CONTROL+"a")
-    dr.find_element_by_id("order_id").send_keys(order_number)
+    WebDriverWait(dr, 10).until(EC.element_to_be_clickable((By.ID, "id")))
+    dr.find_element_by_id("id").send_keys(Keys.CONTROL+"a")
+    dr.find_element_by_id("id").send_keys(order_number)
 
     WebDriverWait(dr, 10).until(EC.visibility_of_element_located((By.XPATH, "//button[contains(text(),'Filter')]")))
     dr.find_element_by_xpath("//button[contains(text(),'Filter')]").click()
 
-    el = WebDriverWait(dr, 10).until(EC.visibility_of_element_located((By.XPATH, f"//a[contains(text(), {order_number})]")))
-    package_number = el.get_attribute('href').split('/')[-1]
-    return package_number
+    _ = WebDriverWait(dr, 10).until(EC.visibility_of_element_located((By.XPATH, f"//td[contains(text(), {order_number})]")))
+    customer_name = dr.find_element_by_xpath("//table//tbody//td//a").text
+    return customer_name
 
 
-def extract_all_package_numbers(orders_packed):
-    """
-    This function does nothing but extracts the package number one by once for all the packed order numbers
-    :param orders_packed: (array/list) Order numbers which were previously packed
-    :return: (list) The package numbers of the respective order numbers
-    """
-    package_number_array = []
-    for order_number in orders_packed:
-        package_number = filter_package(order_number)
-        package_number_array.append(package_number)
-    return package_number_array
 
-
-def visit_package_page(package_number):
+def return_download_info():
     """
     This function takes in the item's package number as input and returns the item's various specs such as
     performa_link, tracking_link, image_link, item_name in order
-    :param package_number: (str) The package number of the item
     :return: performa_link, tracking_link, image_link, item_name, barcode
     """
-
-    dr.get(f"https://seller.hepsiglobal.com/package/{package_number}")
 
     # performa pdf link
     performa_element = WebDriverWait(dr, 10).until(EC.visibility_of_element_located(
@@ -283,27 +195,52 @@ def download_stuff(url, name_directory):
         file_writer.write(site.content)
 
 
-def process_packages(package_number_array, customer_name_packed):
-    """
-    This is the most important function. It processes the package number and download their pdf and images into
-    the respective folders.
-    :param package_number_array: (List/array) package numbers
-    :param customer_name_packed: (List/array) customer names
-    :return: None
-    """
-    for index, package_number in enumerate(package_number_array):
-        (performa_link, tracking_link,
-         image_link, item_name, barcode) = visit_package_page(package_number)
-        customer_name = customer_name_packed[index]
+def visit_listed_page():
+    dr.get("https://seller.hepsiglobal.com/packages/")
+    while True:
+        sleep(5)
+        package_urls = list(dict.fromkeys([x.get_attribute('href') for x in dr.find_elements_by_xpath("//tbody//td//a")]))
+        for package_url in package_urls:
+            response = visit_individual_page(package_url)
+            if not response:
+                return
 
-        performa_name = PERFORMA_FOLDER + customer_name + " " + item_name + ".pdf"
-        download_stuff(performa_link, performa_name)
+        sleep(5)
+        dr.find_element_by_xpath("//li[@class='next']").click()
 
-        tracking_name = TRACKING_FOLDER + customer_name + " " + barcode + ".pdf"
-        download_stuff(tracking_link, tracking_name)
 
-        image_name = IMAGES_FOLDER + customer_name + ".jpg"
-        download_stuff(image_link, image_name)
+def visit_individual_page(package_url):
+    print(package_url)
+    dr.execute_script(f'''window.open("","_blank");''')
+    dr.switch_to.window(dr.window_handles[1])
+
+    dr.get(package_url)
+
+    if not date_verifier():
+        return False
+
+    order_number = WebDriverWait(dr, 1).until(EC.visibility_of_element_located(
+        (By.XPATH, "//label[contains( text(), ' Order ID:' )]/following-sibling::label"))).text
+    customer_name = get_customer_name(order_number)
+
+    dr.get(package_url)
+
+    (performa_link, tracking_link,
+     image_link, item_name, barcode) = return_download_info()
+
+    performa_name = PERFORMA_FOLDER + customer_name + " " + item_name + ".pdf"
+    download_stuff(performa_link, performa_name)
+
+    tracking_name = TRACKING_FOLDER + customer_name + " " + barcode + ".pdf"
+    download_stuff(tracking_link, tracking_name)
+
+    image_name = IMAGES_FOLDER + customer_name + ".jpg"
+    download_stuff(image_link, image_name)
+
+    dr.close()
+    sleep(2)
+    dr.switch_to.window(dr.window_handles[0])
+    return True
 
 
 if __name__ == "__main__":
@@ -312,6 +249,9 @@ if __name__ == "__main__":
     dr = start_chrome_instance()
     dr.get(WEBSITE)
 
+    _ = os.system("cls")
+    _ = os.system("cls")
+
     if not log_in_first():
         log_in()
         input("automatic log in failed. please click the 'log in' button yourself manually. Press enter when done: ")
@@ -319,30 +259,13 @@ if __name__ == "__main__":
         print("Log in failed still. Exiting")
         exit()
     print("Log in successful.")
-
-    dr.get("https://seller.hepsiglobal.com/orders")
     _ = os.system("cls")
     _ = os.system("cls")
-    _ = input("\nPlease press enter here when you are done filtering the items: ")
-    _ = os.system("cls")
-    _ = os.system("cls")
-
-    print("\nPlease wait. Iterating over orders now.....\n")
-    order_number_array, customer_name_array = traverse_orders_page()
-    print("\nPackaging the total number of", len(order_number_array), "detected orders.\n")
-
-    orders_packed, customer_name_packed = pack_items(order_number_array, customer_name_array)
-
-    if len(orders_packed) == 0:
-        input("\nAll selected Items have been packaged already. Please exit the code. \n")
-        exit()
-
-    print("\nPackaged successfully a total number of", len(orders_packed), " orders.\n")
-
     dr.get("https://seller.hepsiglobal.com/packages/")
-    package_number_array = extract_all_package_numbers(orders_packed)
-    print("\nExtraction of Package Numbers complete.\n")
 
-    print("\nNow downloading the PDF files and Images for the Items.....\n")
-    process_packages(package_number_array, customer_name_packed)
-    print("\nThe files have been stored successfully. You may close the program and Chrome Browser now.\n")
+    date_selected = (datetime.today() - timedelta(days=NUM_DAYS)).strftime("%d-%m_%Y")
+
+    print("\nTraverring packages up till", date_selected, "\n")
+    visit_listed_page()
+    dr.quit()
+    input("\nThe files have been stored successfully. You may close the program and Chrome Browser now.\n")
