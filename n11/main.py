@@ -1,26 +1,29 @@
-from datetime import date
+from datetime import datetime
 
 import pandas as pd
 from tqdm import tqdm
 
-from product_detail import get_product_detail
-from product_listing import get_product_urls_for_category
+from n11.product_detail import get_product_detail
+from n11.product_listing import get_product_urls_for_category
 
-category_url = "https://www.n11.com/telefon-ve-aksesuarlari/cep-telefonu?m=Samsung"
+# category_url = "https://www.n11.com/telefon-ve-aksesuarlari/cep-telefonu?m=Samsung"
+category_url = input("Enter the category URL: ")
+scrape_variants = True
 
+print("\nExtracting Product URLs from the listing page #: ")
 product_urls = get_product_urls_for_category(category_url)
+
+print("\n\nNow extracting the Products details.")
 
 products_data = []
 for product_url in tqdm(product_urls[:]):
-    product_data = get_product_detail(product_url)
-    products_data.append(product_data)
+    product_data = get_product_detail(product_url, scrape_variants)
+    products_data += product_data
 
-df = pd.DataFrame(
-    products_data,
-    columns=[
-        "Title", "Price", "Details", "Ratings", "Reviews Count", "Favorites Count",
-        "Primary Image URL", "All Image URLs", "Features", "Features HTML"
-    ],
-)
+file_name = f'n11-{datetime.now().strftime("%y-%m-%d-%H-%M")}.csv'
+if scrape_variants:
+    file_name = file_name.replace("n11", "n11-with-variants-")
 
-df.to_csv(f"N11 - {date.today()}.csv", index=False)
+df = pd.DataFrame(products_data)
+df.to_csv(file_name, index=False)
+

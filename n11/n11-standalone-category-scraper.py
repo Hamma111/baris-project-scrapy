@@ -1,9 +1,64 @@
+from datetime import datetime
 import json
 import re
+from time import sleep
 
+import requests
+from requests.exceptions import ConnectionError
+
+import pandas as pd
+from tqdm import tqdm
 from bs4 import BeautifulSoup
 
-from n11.utils import get_fail_safe_response
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
+}
+
+
+def get_fail_safe_response(url):
+    try:
+        return requests.get(url, headers=headers)
+    except ConnectionError:
+        sleep(2)
+        return get_fail_safe_response(url)
+
+
+PAGINATION_URL = "https://www.n11.com/searchCategoryForPagination/{category_id}?pg={page_number}"
+
+
+def get_category_id_for_category_url(url):
+    response = get_fail_safe_response(url)
+    soup = BeautifulSoup(response.content, features="html.parser")
+
+    category_id = soup.find("input", {"class": "categoryId"}).attrs['value']
+
+    return category_id
+
+
+def _get_product_urls_for_category(category_id):
+    product_urls = []
+    i = 0
+    while True:
+        i += 1
+        url = PAGINATION_URL.format(category_id=category_id, page_number=str(i))
+        response = get_fail_safe_response(url)
+        soup = BeautifulSoup(response.content, features="html.parser")
+
+        _product_urls = [x.attrs.get("href") for x in soup.find_all("a", {"class": "plink"})]
+
+        if not _product_urls:
+            break
+
+        product_urls += _product_urls
+
+        print(i, end=", ")
+
+    return product_urls
+
+
+def get_product_urls_for_category(category_url):
+    category_id = get_category_id_for_category_url(category_url)
+    return _get_product_urls_for_category(category_id)
 
 
 def parse_response_content(content, scrape_variant):
@@ -15,7 +70,7 @@ def parse_response_content(content, scrape_variant):
         .strip()
         .replace("\n", '')
     )
-    product_script_text = product_script_text[product_script_text.find('{"pBrand"'):product_script_text.find("};")]
+    product_script_text = product_script_text[product_script_text.find('{"pBrand"'):product_script_text.find("};")] + "}"
     product_script_dict = json.loads(product_script_text)
 
     var_script_text = (
@@ -122,4 +177,30 @@ def get_product_detail(product_url, scrape_variant: bool):
     response_content = get_fail_safe_response(product_url).content
     return parse_response_content(response_content, scrape_variant)
 
-product_url = "https://www.n11.com/urun/xiaomi-redmi-note-11-pro-8-gb-128-gb-xiaomi-turkiye-garantili-3042752?magaza=xiaomiturkiye"
+
+# category_url = "https://www.n11.com/telefon-ve-aksesuarlari/cep-telefonu?m=Samsung"
+category_url = input("Enter the category URL: ")
+scrape_variants = True
+
+print("\nExtracting Product URLs from the listing page #: ")
+product_urls = get_product_urls_for_category(category_url)
+
+print("\n\nNow extracting the Products details.")
+
+products_data = []
+for product_url in tqdm(product_urls[:]):
+    try:
+        product_data = get_product_detail(product_url, scrape_variants)
+        products_data += product_data
+    except Exception as ex:
+        print(ex
+              )
+        print("!!!Skipping failed URL:", product_url, )
+        sleep(3)
+
+file_name = f'n11-{datetime.now().strftime("%y-%m-%d-%H-%M")}.csv'
+if scrape_variants:
+    file_name = file_name.replace("n11", "n11-with-variants-")
+
+df = pd.DataFrame(products_data)
+df.to_csv(file_name, index=False)

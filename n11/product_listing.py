@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from utils import get_fail_safe_response
+from n11.utils import get_fail_safe_response
 
 PAGINATION_URL = "https://www.n11.com/searchCategoryForPagination/{category_id}?pg={page_number}"
 
@@ -29,7 +29,8 @@ def _get_product_urls_for_category(category_id):
             break
 
         product_urls += _product_urls
-        print(len(product_urls))
+
+        print(i, end=", ")
 
     return product_urls
 
