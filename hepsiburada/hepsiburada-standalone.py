@@ -1,16 +1,14 @@
-from datetime import datetime
-import json
 import re
-from time import sleep
 
 import requests
-from requests.exceptions import ConnectionError
 
 import pandas as pd
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
+# We update this URL
 category_url = "https://www.hepsiburada.com/yazicilar-c-3013118"
+# category_url = "https://www.hepsiburada.com/magaza/first-sourcer?markalar=Garanti%E2%82%AC20Mall"
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
@@ -23,21 +21,35 @@ product_urls = set()
 
 page_no = 1
 while True:
-    url = f"{category_url}?sayfa={page_no}"
+    if "?" not in category_url:
+        url = f"{category_url}?sayfa={page_no}"
+    else:
+        url = f"{category_url}&sayfa={page_no}"
+
+    print(url)
 
     site = requests.get(url, headers=headers)
     if site.url != url and "sayfa=1" not in url:
         break
 
     soup = BeautifulSoup(site.content, "html.parser")
-    products_elements = (
-        soup
-        .find("div", {"id": re.compile("ProductList")})
-        .find("ul", {"class": re.compile("productListContent")})
-        .find_all("li", {"class": re.compile("productListContent")})
-    )
-    product_urls |= {f"https://www.hepsiburada.com{p.a.attrs['href']}" for p in products_elements if p.a}
+    if soup.find("div", {"id": re.compile("ProductList")}):
+        products_elements = (
+            soup
+            .find("div", {"id": re.compile("ProductList")})
+            .find("ul", {"class": re.compile("productListContent")})
+            .find_all("li", {"class": re.compile("productListContent")})
+        )
+    elif soup.find("ul", {"class": "product-list"}):
+        products_elements = (
+            soup
+            .find("ul", {"class": "product-list"})
+            .find_all("li", {"class": "search-item"})
+        )
+    else:
+        raise Exception("Invalid listing page received. Code has not been written to handle such listing page.")
 
+    product_urls |= {f"https://www.hepsiburada.com{p.a.attrs['href']}" for p in products_elements if p.a}
     print(page_no, end=", ")
     page_no += 1
 
@@ -50,15 +62,16 @@ def extract_product_details(product_url):
     brand = soup.find("span", {"class", "brand-name"}).get_text(strip=True)
     brand_url = f'https://www.hepsiburada.com{soup.find("span", {"class", "brand-name"}).a.attrs["href"]}'
 
-    sku = soup.find("meta", {"itemprop": "sku"}).attrs['content']
-    gtin = soup.find("meta", {"itemprop": "gtin"}).attrs['content']
+    sku = soup.find("meta", {"itemprop": "sku"}).attrs.get('content', "")
+    gtin = soup.find("meta", {"itemprop": "gtin"}).attrs.get('content', "")
 
-    price = soup.find('span', {'itemprop': 'price'}).attrs['content']
+    price = soup.find('span', {'itemprop': 'price'}).attrs.get('content', "")
 
     average_rating_el = soup.find("span", {"class": "rating-star"})
     average_rating = average_rating_el.get_text(strip=True) if average_rating_el else ""
     num_of_comments_el = soup.find("div", {"id": "comments-container"})
-    num_of_comments = num_of_comments_el.get_text(strip=True).replace("Değerlendirme", "").strip() if num_of_comments_el else ""
+    num_of_comments = num_of_comments_el.get_text(strip=True).replace("Değerlendirme",
+                                                                      "").strip() if num_of_comments_el else ""
 
     breadcrumbs = [b.get_text(strip=True) for b in soup.find("ul", {"class": "breadcrumbs"}).find_all("li")]
     breadcrumbs_urls = [b.a.attrs['href'] for b in soup.find("ul", {"class": "breadcrumbs"}).find_all("li")]
@@ -110,7 +123,7 @@ def extract_product_details(product_url):
 print("Now extracting product details..")
 
 products_data = []
-for product_url in tqdm(list(product_urls)[:4]):
+for product_url in tqdm(list(product_urls)):
     products_data += extract_product_details(product_url)
 
 df = pd.DataFrame(products_data)
